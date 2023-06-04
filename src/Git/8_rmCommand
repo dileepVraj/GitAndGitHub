@@ -1,0 +1,21 @@
+In this section we are going to learn about 'git rm' command where we it is useful to remove files from working directory
+and staging area.
+
+1. To remove particular/specific file from working directory and staging area use 'git rm <fileName>' command.
+
+Note: This command will not remove specific file it it is not committed after staged into the staged area.
+If we want to remove the file which is not committed in staging area we first have to commit the changes and then we have
+to use 'git rm <fileName> command.'
+
+
+2. To remove all files from working directory and staging area use 'git rm -r --cached .' command.
+
+3. To remove a particular file from staging area but not from working directory use 'git rm --cached <fileName> '
+this command removes specified file from staging area even though it is not committed after staging to staging area after
+making changes or modifications.
+
+4. If we want to remove files from only working directory use 'rm <fileName>' where it removes file only from working
+directory.
+
+
+

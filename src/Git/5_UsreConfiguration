@@ -1,0 +1,70 @@
+'git config' command is used to configure various aspects of Git.
+
+To configure email and username that applies to repositories of Git we have to use following commands.
+
+To configure email: 'git config -- global user.email "emailAddress"'
+
+To configure userName: 'git config -- global user.name "userName"'
+
+Explanation of above commands in detail:
+---------------------------------------
+
+git config --global user.email "example@gmail.com"
+
+This command is used to set the email address associated with your Git configuration. Here's a breakdown of each part
+of the command:
+
+git config: This is the Git command for configuring various aspects of Git.
+--global: This flag indicates that you want to set the configuration globally, which means it will apply to all
+repositories on your machine.
+If you omit this flag, the configuration will be specific to the current repository.
+user.email: This is the configuration key for the email address.
+"example@gmail.com": This is the value you want to set for the email address. Replace it with your actual email address
+within the quotation marks.
+By running this command, you are instructing Git to set the specified email address as the default email for all your
+Git activity.
+
+git config --global user.name "arun"
+
+This command is used to set the username associated with your Git configuration. Here's a breakdown of each part of the
+command:
+
+git config: This is the Git command for configuring various aspects of Git.
+--global: This flag indicates that you want to set the configuration globally, applying to all repositories on your
+machine.
+user.name: This is the configuration key for the username.
+"arun": This is the value you want to set for the username. Replace it with your actual desired username within the
+quotation marks.
+Running this command will set the specified username as the default name for all your Git activity.
+
+By using these commands and providing your desired email address and username, you can configure Git to associate your
+commits and other actions with the specified email and username.
+
+-----------------------------------------------------------------------------------------------------------------------
+How to change username and email in configuration:
+
+To change username/email simply re execute the configuration commands
+1. As to change the name only for specific repository or current repository.
+    'git config user.name "userName"'
+
+2. As to change the email only for specific repository or current repository.
+    'git config user.email "newEmail"'
+
+3. To change user name for all repositories we create in future
+    'git config --global user.name "userName"'
+
+4. To change email for all repositories we create in future
+    'git config --global user.email "newEmail"'
+------------------------------------------------------------------------------------------------------------------------
+To view all configuration settings
+----------------------------------
+
+'git config --list'
+
+To view all global configuration settings
+
+'git config --global --list'
+
+------------------------------------------------------------------------------------------------------------------------
+
+

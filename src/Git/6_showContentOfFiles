@@ -1,0 +1,34 @@
+The commands we discuss in this section are all about to view content of files present in working directory, staging area
+and local repository by using commit hash code.
+
+1. To view content of files present in working directory there is one simple view we can view all files in one editor
+called 'vim' by using following command.
+
+'vim fileName'
+
+The above command will open the specified file in vim editor where to edit file we have to enable insert mode by clicking
+on 'i' after making changes to files we can save the changes and quit the editor by clicking escape button and clicking
+':wq' and click enter this ':wq' meaning is write and quit the vim editor.
+
+If we want to quit the vim editor without saving changes we made to the file type ':q!' and press enter.
+
+If we want to set row numbers in vim editor first switch to normal mode and by pressing ':' enter into commandline mode
+and enter ': set number' command we can enable row numbers to file in Vim editor.
+
+If we want to off row number use ':set nonumber' command.
+
+If we want to enable programming style to programming giles use ':syntax on' if want to off it use ':syntax off' commands.
+
+------------------------------------------------------------------------------------------------------------------------
+
+2. To see content of files present in Staging area:
+
+To see the content of File that present in Staging area use 'git show :fileName' command.
+
+------------------------------------------------------------------------------------------------------------------------
+
+3. To see the content of File in specific commit use 'git show commitHashCode:fileName' command.
+
+
+
+

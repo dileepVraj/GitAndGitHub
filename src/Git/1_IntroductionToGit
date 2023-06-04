@@ -1,0 +1,41 @@
+ /**
+     * Imagine you are working on a project with your friend, both of you want to make changes to same files.
+     * Git is a super smart and organized assistant that helps you keep track of all changes you and your friend make.
+     */
+
+    /**
+     * Here is how it works:
+     -----------------------
+     *
+     * Starting a project:
+      --------------------
+      you and your friend create a repository using Git. Think of it as a special folder that holds
+     * all your project folder.
+     *
+     * Making changes:
+      ----------------
+      You and your friend each can make changes to the files in the repo. Git keeps track of every
+      change.
+     * you make, like adding new code, modifying existing code and deleting files.
+     *
+     * Snapshots: Git takes snapshots every time you make changes to the files in project, it is like taking picture of
+     * your project at the moment.
+     * These snapshots are called commits in Git.
+     *
+     * Branches: Sometimes you and your friend want to work on different parts of same project at the same time.
+     * Git allows you to create branches which are like separate paths for making changes.
+     * Each branch keeps track of it's own set of commits.
+     *
+     * Merging changes: Git helps you to automatically merge the changes that you and your friend made on separate
+       branches
+     * making sure everything fits together nicely.
+     *
+     * Keeping history: Git only doesn't keep track of current version of project.
+     * It also remembers every single change we made.
+     * so if you made a mistake or want to go back to older version, Git can help you to easily find and replace it.
+     *
+     * Collaboration: Git makes it easy to work with your friend or even with whole team. you can share your repo with
+       others, and they can contribute their changes too.
+     * Git helps to manage all different changes and ensure that everyone's work is organized.
+     *
+     */

@@ -1,0 +1,6 @@
+To install Git version control system in windows machine surf 'download Git' in google search engine and navigate to
+'https://git-scm.com',
+Under the downloads section, click on windows option where it automatically start's downloading 64 bit Git.exe file
+
+After downloading the Git.exe file double click on it and choose run as administrator option to install Git in your
+local machine.

@@ -1,0 +1,41 @@
+Merging in Git is process of combining changes from different branches of a code repository. Imagine you are working on
+a project with your teammates, and each person is assigned a separate branch to work on their own changes.
+
+When you merge branches in Git you are bringing those changes made in different branches into a one branch, typically main
+branch.
+This allows everyone's work come together and become part of the main project.
+
+Here is simple example of merging process in Git:
+
+1. Create branches: each person in team creates each branch to work on their own changes. This allows them to work
+independently without interfering in each other's work.
+
+2. Make changes: every one edit the code, make enhancements to the code in their branch, add and delete files and fix
+any bugs are found. Each branch contains separate set of changes.
+
+3. Merge branches: When some one completed their work and want to incorporate their work with main project, they merge
+their branch with main branch(eg. master). This combines their code changes with existing codebase.
+
+4. Conflict resolutions: Sometimes Git encounters conflicts when merging branches. Conflicts happen when two or more
+people change the same lines of code. Git prompt the user to resolve these conflicts manually by choosing which changes
+want to keep or modify the code to combine the changes.
+
+5. Commit the merge: Once the conflicts are resolved, Git creates a merge commit. This commit represents the integration
+of the changes from the branch being merged into the main branch. It captures both original commit history and the new
+changes.
+
+-------------------------------------------
+
+Pavan
+
+In Git we have two types of merges fast-forward and three way merge.
+
+Where fast-forward merge is type of merge that merging feature branch with master branch without adding new commits to
+the master branch.
+
+The three way merge is type of merge where commits in master and feature branch will be done simultaneously where
+the Git will create merge commit while performing three way merge.
+
+Merge commit is process of tracking commits of two branches master and merging branch from common ancestor commit and
+perform merging the branch by adding all changes done in both branches.
+

@@ -1,0 +1,52 @@
+The git reset command in Git is a powerful and versatile command used to manipulate the state of the repository,
+the staging area, and the working directory. It allows you to move the current branch pointer, update the staging area,
+and discard changes. The reset command can be used with different options to achieve various effects. Here are the main
+uses of the git reset command:
+
+1. Moving the branch pointer: By default, git reset moves the branch pointer to a specified commit while updating the
+staging area and working directory accordingly. This is often used to "undo" commits or move the branch to a different
+commit.
+
+2. Soft reset: The --soft option in git reset moves the branch pointer to a specified commit, but without modifying the
+staging area or working directory. This is useful when you want to undo commits while keeping the changes in the
+staging area or working directory for further modification or recommitting.
+
+3. Mixed reset: The default behavior of git reset (without specifying --soft or --hard) is a mixed reset.
+It moves the branch pointer to a specified commit and resets the staging area to match that commit, but leaves the
+working directory unchanged. This is useful when you want to unstage changes but keep the modifications intact.
+
+4. Hard reset: The --hard option in git reset moves the branch pointer to a specified commit, resets the staging area
+to match that commit, and discards all changes in the working directory. This is useful when you want to completely
+remove all modifications and restore the repository to the state of a previous commit.
+
+5. Unstaging files: You can use git reset with the HEAD parameter to unstage files that have been added to the staging area.
+ This is done by specifying the files or directories you want to unstage. For example:
+
+ git reset HEAD file.txt  # Unstages file.txt
+
+6. Discarding local changes: If you have made changes to your working directory and want to discard them,
+you can use git reset with the --hard option to reset the branch and completely remove all modifications.
+
+7. Moving commits: By specifying a commit before the desired target commit, you can move commits from one branch to
+another or change the commit's parent reference. This is an advanced operation that should be used with caution.
+
+------------------------------------------------------------------------------------------------------------------------
+
+Pavan notes:
+
+1. If we want to reset changes or files in staging area we can use 'git reset <fileName>' command, this command removes
+the specified file in staging area.
+
+
+2. If we want to remove the commit we made the we have to use 'git reset <commitHashCodeOfPreviousCommit> ' i.e assume
+ we have three commits for our master branch commit1, commit2, and commit3.
+ If I want to remove the commit3 which is latest commit and HEAD of master branch is pointing to the commit3 then I have
+ to use the commit2 hashCode in 'git reset <commitHashCode>' command where commit the pointer of branch will moves to
+ the commit2 and removes all commits after the commit2.
+
+3. If we want changes we commit of specific commit in staging area and working directory after removing commit using 'git reset'
+ command we have to use '--soft' with the the command.
+
+ 'git reset --soft <commitHashCode>'
+
+

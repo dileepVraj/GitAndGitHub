@@ -1,0 +1,233 @@
+1. 'git status' command is used to display the current state of Git repository.
+It provides information about any modified, added or deleted files, as well as the branch you are on and other helpful
+details.
+The 'git status' command is one of the most commonly used command in the Git, as it helps you to understand the status
+of your repository and what actions you need to take.
+
+When you run the 'git status' command Git examines the current status of your working directory and compares it to the
+latest commit in the repository.
+Then it provides you information about:
+
+1. Branch information: 'git status' displays the name of the current branch you are working on. For example if you are
+working on main branch then it will show "on branch main".
+
+2. Changes to tracked files: Git will list any modified files in your working directory that are already tracked by Git.
+It will show you the names of these files and indicate that they have been modified.
+
+3. Untracked files: If you have any files that are untracked by Git in your working directory those files are called
+Untracked files and those files are list by Git as untracked files, typically these are new files that you have created.
+
+4. Staged Changes: If you have used the 'git add' command to stage changes for next commit 'git status' will show the files
+that are currently staged.
+
+Branch ahead/behind: If you are working on a branch that has remote repository configured, 'git status' will indicate
+weather your branch is ahead or behind the remote branch.
+This information helps you understand if there are changes on remote repository that you need to fetch or push.
+------------------------------------------------------------------------------------------------------------------------
+2.git add:
+
+The 'git add' command is used in Git to stage changes to the next commit.
+It allows you to select specific files or changes within files to include in the staging area, which is a temporary
+storage area before committing changes to the repository.
+
+Different ways we use 'git add' command:
+---------------------------------------
+
+1. Add specific files: You can specify the names of individual files you want to add to the staging area.
+syntax: git add file1.txt file2.txt
+
+The above command add file1.txt and file2.txt to staging area.
+
+2. Add all changes: You can use a period (.) to add all changes in the current directory and it's subdirectories to the
+staging area.
+syntax: git add .
+
+This command stages all modified, deleted and new files.
+
+3. Add changes interactively:
+Git provides an interactive mode where you can selectively stage changes within files. it launches a prompt where you
+can review each change and decide weather to include it or not.
+To use interactive mode use following command
+syntax: git add -p
+
+This command will guide you through each change and give you options to stage or skip them.
+
+4. Add changes by pattern:
+You can use patterns or wildcards to add files that match certain criteria. for example to add all .txt files in the
+current directory, you can use following command.
+syntax: git add * .txt
+
+5. Add changes from a specific directory: If you want to add changes from a specific directory you can provide path after
+'git add' command.
+syntax: git add path/to/directory
+
+This command add all files in specified directory to staging area.
+
+6. Add changes interactively from a specific file: If you want to interactively stage changes from a specific file,
+you can provide the file path after the 'git add -p' command.
+
+syntax: git add -p path/to/file.txt
+
+This command launches interactive mode for changes within 'file.txt' only.
+-----------------------------------------------------------------------------------------------------------------------
+3. git commit:
+Certainly the 'git commit' is used to save your changes as a new commit in Git.
+It is a fundamental command in Git that is used to record the changes you have made to your project.
+
+Syntax: git commit -m "commit message"
+
+Let's break down the command and it's components.
+
+'git commit' this is a Git command used to create a new commit.
+
+'-m commit message' This is a option to include a commit message. The commit message is brief description that explains
+the changes made in the commit.
+It is important to commit clear and concise commit message to document the purpose of the changes.
+
+Example:
+
+Make changes to your files in your working directory, such as modifying existing files and creating new files.
+Stage the changes you want to include in the commit using 'git add' command.
+Run the 'git commit' command with the commit message to save the staged changes.
+
+Syntax: git commit -m "Update SaveMe File with new Instructions"
+
+The commit message should be descriptive and should summarize the changes you made in the commit.
+
+After executing the 'git commit' command the Git will create a new commit that captures the current state of your project
+including the changes you staged.
+Each commit has unique identifier (SHA-1) that allows you to reference it later.
+
+It's important to note that 'git commit' command is used to save the changes locally on your machine. To share those
+commits with others you have to push them to a remote repository, you would need to use 'git push' command.
+
+By using 'git commit' command you can save history of changes in your Git repository, making it easy to track modifications,
+collaborate with others and revert to previous states if needed.
+
+------------------------------------------------------------------------------------------------------------------------
+4. git log:
+
+   The 'git log' command is used to display the commit history of the Git repository.
+   It provides detailed log of commits, including information such as "commit hash", "author", "date", and commit message.
+   The 'git log' command is powerful tool to review the commit history and understand the progression of changes in
+   a project.
+
+   When you run the 'git log' command it displays the commit history in reverse chronological order starting with most
+   recent commit.
+   Each commit is displayed with it's commit hash(a unique identifier), author name, author email, date, and commit
+   message.
+
+   Here is an example you might see when you run 'git log' command.
+
+   commit 9f9da1e3a89ab1a52d5879b15dd8553a8c79988a
+   Author: John Doe <johndoe@example.com>
+   Date:   Mon Jan 1 12:00:00 2023 -0500
+
+       Update README with installation instructions
+
+   commit a6e0342f84b7c724ba8e02f687d5e5298c32d0a2
+   Author: Jane Smith <janesmith@example.com>
+   Date:   Sun Dec 31 15:30:00 2022 -0500
+
+       Fix bug in login functionality
+
+   commit 52df3772e4a9921c7430634a7f3267407d15e79d
+   Author: John Doe <johndoe@example.com>
+   Date:   Sat Dec 30 09:45:00 2022 -0500
+
+       Add new feature: user profile page
+
+  Some common use cases of 'git log' command are:
+
+  1. Reviewing the commit history: You can see the commits made by different authors, their associated messages, and
+  the dates they are created.
+  This allows you to understand the evolution of the project and track specific changes.
+
+  2. Find a specific commit: You can search for particular commit using its commit hash or part of it's commit message.
+  This is helpful when you need to refer back to a specific point in the history or retrieve certain changes.
+
+  3. Examining changes: By viewing the commit history you can inspect the differences introduced in each commit and can
+  understand modifications to files over time.
+
+  Analyzing project activity: The commit history can provide frequency and pattern of commits, helping you understand
+  the level of activity and contributions within the repository.
+
+  The 'git log' command provides various options and flags to customize the output, such as filtering the commits by
+  author, date ranges, and formatting options.
+
+  Formatting options in the git log command allow you to customize the output and control how the commit history is displayed.
+  These options enable you to specify the format and content of each commit's log entry. Here are a few commonly used
+  formatting options:
+
+  --oneline: This option provides a condensed output, showing each commit on a single line with the abbreviated commit
+  hash and commit message. It's useful for getting a quick overview of the commit history.
+
+  --abbrev-commit: This option shortens the commit hash to a shorter, abbreviated form. It can be handy when you don't
+  need the full commit hash and want a more concise display.
+
+  --author=<pattern>: Using this option, you can filter the commit history based on the author's name or email address.
+  You can specify a partial or full name, email address, or regular expression pattern to match against the author's
+  information.
+
+  --since=<date> and --until=<date>: These options allow you to define a date range to filter the commit history.
+  You can use various date formats, such as "YYYY-MM-DD" or keywords like "yesterday," "2 weeks ago," etc.
+
+  --pretty=format:"<format>": This option enables you to define a custom output format using placeholders.
+  You can specify the information you want to include in the log entry, such as commit hash (%H), author name (%an),
+  commit message (%s), and more. You can refer to the Git documentation for a complete list of available placeholders.
+
+  Here's an example of using formatting options with git log:
+
+  git log --oneline --abbrev-commit --author="John Doe" --since="2022-01-01" --pretty=format:"%h %s"
+  This command would display a condensed log of commits made by "John Doe" since January 1, 2022, showing the abbreviated
+  commit hash and commit message for each commit.
+
+  The formatting options in git log provide flexibility in tailoring the output to your specific needs, making it easier
+   to analyze and review the commit history in a way that suits your workflow.
+------------------------------------------------------------------------------------------------------------------------
+
+5. git diff:
+
+   The 'git diff' command is used to find the differences or changes between different states of your Git repository,
+   such as different commits, between the working directory and staging area, or between branches.
+
+   In simple terms 'git diff' is used to see what changes happen in your project.
+   It provides a line by line comparison of files, highlighting additions(+) and deletions(-).
+
+   Here are some common use cases for 'git diff'
+
+   1. diff between working directory and staging area:
+   Running git diff command without any additional arguments shows the difference between current state of files in
+   working directory and staging area.
+   This helps you to find out changes you have made before staging them.
+
+   2. Diff between commits:
+   You can use 'git diff commit a commit b' to compare two specific commits and find differences between them.
+   For example the above command shows the changes between commit a and commit b.
+
+   3. Diff between branches:
+   By specifying branches names with 'git diff' you can compare differences between two branches.
+   For example 'git diff branch 1 branch 2' show the changes between branch 1 and branch 2.
+
+   4. Diff a specific file:
+   You can use 'git diff <file>' to see the changes made to a specific file compared to its last committed version.
+
+   5. Diff bw file in working dir and latest commit:
+   To find difference between a file in working dir and latest commit use 'git diff HEAD <fileName>' where 'HEAD' refers
+   to the last commit on the current branch.
+
+   6. Diff bw file in staging area and last commit:
+      'git diff --staged HEAD <fileName>'
+
+
+
+
+
+
+
+
+
+
+
+
+

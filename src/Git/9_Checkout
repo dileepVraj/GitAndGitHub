@@ -1,0 +1,71 @@
+In this section we are going to know about one of most useful Git command 'git checkout' where it is useful to perform
+various powerful operations on repositories.
+
+The primary use of 'git checkout' command includes:
+
+1. Switching branches: We can use 'git checkout' command to switch between different branches in our repository.
+
+By doing this, two things will happen:
+
+1. Working directory update: The files in working directory which reflects current state of your project, will be replaced
+with the files from specified branch.
+This means the files in working directory will match the state of branch you switched to.
+
+2. HEAD update: The HEAD pointer, which points to the current commit you are working on, will be updated to the latest
+commit of the specified branch.
+This means that any new commits you make will be added on top of the specified branch.
+
+Followed question, What is HEAD?
+
+HEAD is reference in Git that points out to the current branch you are working on or the commit you have checked out to.
+It is essentially a pointer to the tip of current branch.
+
+In simple terms you can think of HEAD as snapshot of your project at specific point of time. It represents the state of
+working directory and the commit you are currently working on.
+
+Whe you make a new commit the HEAD pointer moves forward to point the new commit, indicating that this is the latest
+commit in your current branch.
+This allows Git keeps track of the current state of your project and easily determine the parent commit to the next commit
+you make.
+
+In addition to pointing to the latest commit the HEAD can also refer to a specific branch name(master or feature branch)
+rather than directly pointing to a commit.
+In this case it is indirectly pointing to the latest commit in the current branch you are on.
+-----------------------------------------------
+2. Checking out specific commits: With 'git checkout' you can move to the a specific commit in your project history.
+This puts your repository in 'Detached HEAD' state, where you are not on any branch but directly on specified commit.
+
+-----------------------------------------------
+3. Creating new branch: The 'git checkout '  command wit combination of '-b' will create new branch and switch to the
+particular branch in one step.
+This is convenient way to work on new branch.
+
+-----------------------------------------------
+4. Discard changes: If you have made modifications to the files in working and want to revert those changes you can use
+'git checkout' command which will restore the files to the last committed state.
+
+-----------------------------------------------
+5. Restoring individual files: You can use 'git checkout' to retrieve specific files from a commit or branch and replace
+the corresponding files in working directory with their versions from the specified source.
+
+-----------------------------------------------
+6. Checking out to remote branches: Using 'git checkout' command with'-t' or '--track' option, you can create and switch
+to local branch that tracks a remote branch.
+This is useful when you want to work with branch from a remote repository.
+
+------------------------------------------------------------------------------------------------------------------------
+The 'git checkout' command in Git is useful to undo the changes made in tracked files in working directory which are
+un-staged changes.
+
+For example we have file1.txt in working directory which is added and committed to the local repo so it is tracked file
+and later I have edited the file1.txt in preferred editor and made some change 'added another line of code' so if I want
+to undo those changes I made later in working directory I can use 'git checkout <fileName>' command to do that.
+
+------------------------------------------
+
+
+
+
+
+
+

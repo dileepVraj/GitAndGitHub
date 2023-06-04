@@ -1,0 +1,31 @@
+To create local repository in our preferred working directory/folder in our local machine we have to run the 'git init'
+command, This commands setup the necessary files and directories to start tracking changes and managing version control
+for your project.
+It creates '.git' directory at root of specified directory, which contains repository's metadata and objects.
+
+Here are some tasks performed by 'git init' command during installation process.
+
+1. creates the .git directory: The .git directory is the core of Git repository. It is a hidden directory that contains
+all necessary files and folders to manage version control of the project.
+
+2. Setup the repository structure: Within the '.git' directory git creates several subdirectories, such as 'objects',
+'refers', 'hooks' and 'config'.
+These directories store the repository data, hook scripts, and configuration settings, respectively.
+
+3. Initializes the empty repository: by default the 'git init' initializes an empty repository with no commits or
+branches.
+It provides a clean slate to start tracking changes and recording your projects history.
+
+4. Configures default settings: During initialization Git setups default configuration settings for the repository,
+such as username and email address associated with commits.
+You can modify these settings later using 'git config' command.
+
+The 'git init' command typically runs once at beginning of a new project, to create a local git repository.
+After initialization you can use other git commands like 'git add', 'git commit', 'git branch' to manage your project
+version control and collaborate with others.
+
+In summary 'git init' stands for initialize, and running this command setups a new Git repository in the specified
+directory by creating the necessary files, directories and default configurations for version control.
+
+
+

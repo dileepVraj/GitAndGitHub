@@ -1,0 +1,56 @@
+Branching is a way to create separate lines of development in Git repository. It allows you to diverge from main development
+line(master branch) and work on different features, bug fixes, and experiments independently.
+Each line represents different line of development with its own commits and changes.
+
+The main use of branching in Git are as follows:
+
+1. Feature development: Branches are commonly used to work on new features or enhancements.
+You can create new branch for new feature and allows multiple developer to work on different features simultaneously without
+interfering with each other work.
+Once the feature is completed development and tested it can be merged into the main branch.
+
+2. Bug Fixes: Branches can be created specifically for bug fixes. This allows you to isolate the bug fixing changes from
+the ongoing development in other branches.
+Once the bug is merged the branch can be merged with main branch.
+
+3. Experimentation: You can create branch to try out new ideas, refactor code, or test different approaches.
+If the experiment is successful, the changes can be merged into the main branch. If not, the branch can be discarded without
+affecting the main development.
+
+4.Parallel development: Branches enable parallel development by allowing multiple team members to work on different parts
+of a project simultaneously. Each person can create their own branch, make changes, commit them, and collaborate with
+others. The changes can later be merged together, combining the work of different team members.
+
+5.Versioning and Release Management: Branches are useful for managing different versions of a software project.
+You can create branches for specific versions, such as a "stable" branch for the current stable release
+and a "development" branch for ongoing work. This allows you to provide bug fixes and updates to different versions
+independently.
+------------------------------------------------------------------------------------------------------------------------
+Branches Commands:
+
+1. To view branches in Git use 'git branch' where this command list all branches in this repository and highlights active
+branch with asterisk mark(*).
+
+2. To create a new branch in current repository use 'git branch <nameOfBranch>' command where it creates a new branch
+in current repo with specified name.
+
+3. To switch between branches use 'git checkout <branchName>' which switch to specified branch in command.
+
+4. To create and switch to the same branch in single command use 'git checkout -b <branchName>'.
+
+5. To delete any branch use 'git branch -d <branchName>' command where it deletes the specified branch from the current
+repository.
+
+6. Point to be noted: When we create a new branch from main branch all commits and files of main branch will be inherited
+to new branch we created by default.
+This has many advantages like we will get all files and commits from master branch which is means we will work on up to
+date files when we are working independently on new branch for fixes or new features, The code we modified will be isolated
+with main code base that resides on main branch until we complete and test the code in new branch and merge it with main
+branch.
+
+And same way what ever changes we make or files we created on master/child branch will not reflect in child/parent branch
+until we merge child branch with main branch.
+
+
+
+

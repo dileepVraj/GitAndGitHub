@@ -1,0 +1,30 @@
+A merge conflict in Git occurs when there are conflicting changes in different branches that Git cannot automatically
+resolve during a merge operation.
+It happens when you want to merge two branches where same changes are done to a part of file or conflicting modifications
+to the same file.
+
+When Git encounters the merge conflict it pauses the merge and points the conflicted files. It inserts special markers
+such as "<<<<<<<", "=======", and ">>>>>>>" into conflicting section of the file to indicate the conflict.
+These markers help you to identify the conflicting changes.
+
+It's up to you as a user to resolve a conflict manually by deciding how the final merge has to look like. You need to
+review the conflicting sections, remove the markers and make necessary modifications to resolve the conflicts.
+After resolving the conflict you must stage the changes and commit to complete the merge.
+
+Here are general steps to resolve a merge conflict:
+
+1. Identify the conflicted files: use command 'git status' to view or find files with conflicts, typically files with
+conflicts are marked as "modified" or "unmerged" in the output.
+
+2. Open the conflict files: Locate the conflict files in your editor and look for markers "<<<<<<<<", "=========" and
+">>>>>>>>".
+
+3. Edit the files to resolve the conflicts: Decide how you want to combine the conflicting changes.
+Remove the conflict markers and make necessary modifications to create desired final version.
+
+4. Stage the resolved file(s): After resolving the conflicts in each file, Stage the changes using 'git add <resolved file>'
+for each resolved file.
+
+5. Merge the changes: Once the changes are done merge them by using 'git commit'. Git will create a new merge commit
+that incorporates your changes.
+

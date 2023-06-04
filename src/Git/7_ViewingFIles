@@ -1,0 +1,80 @@
+Viewing Files In Working Directory:
+----------------------------------
+If we want to see the status of files such as tracked, untracked, modified, deleted etc we
+can use the following command 'git status'.
+
+Viewing files in specific commit:
+--------------------------------
+1.To view all file names in specific commit we can use following command
+'git show --name-only <commitHash>'
+
+This command will show list of file names that are affected by that commit, showing only
+names of files.
+
+2.If you want to see actual changes made to the files you can use the following command
+'git show <commitHash>'
+
+This command shows detailed view of specific commit, including commit message, author name,
+date, and changes made to the each file.
+It will show added and deleted lines for each modified file in commit.
+
+In this section we are going to learn how to see the files those exist in any particular area of Git architecture(working-
+directory, Staging area, repository).
+
+1. To see all files present in working directory use 'ls'.
+
+2. To see all untracked files in working directory use 'git ls-files --others --exclude-standard'.
+    where 'git ls-files' is used to list files in git repository.
+    The '--others' option filters the list to show only untracked files.
+    The '--exclude-standard excludes any file that specified in the .gitignore file'.
+
+    The .gitignore file is a text file used by Git to specify intentionally untracked files that should be ignored.
+    It allows you to define patterns for files or directories that Git should ignore and not include in version control.
+
+    When Git encounters a file or directory specified in the .gitignore file, it will not track or consider them for
+    changes, additions, or deletions. This is particularly useful for excluding generated files, build artifacts,
+    temporary files, and other files that are not necessary to be version controlled.
+
+    The .gitignore file can be placed at the root directory of your Git repository or in specific subdirectories to
+    specify rules for ignoring files within those directories. Rules in the .gitignore file can be written using
+    wildcards, regular expressions, and other patterns to match file or directory names.
+
+    Here's an example of a simple .gitignore file:
+
+    bash
+    Copy code
+    # Ignore build artifacts
+    build/
+    bin/
+
+    # Ignore log files
+    *.log
+
+    # Ignore configuration files with sensitive information
+    config.ini
+
+    # Ignore files in a specific directory
+    docs/temp/
+    In this example, the build/ and bin/ directories, all files with the .log extension, the config.ini file, and the
+    contents of the docs/temp/ directory will be ignored by Git.
+
+    By using the .gitignore file, you can ensure that certain files and directories are not accidentally committed
+    to your repository, keeping your version control focused on the essential source code and project files.
+
+3. To see modified files in working directory use 'git status -s ' command where it will give the short output by indi-
+cating untracked files By M fileName.
+
+------------------------------------------------------------------------------------------------------------------------
+2. To list files present in Staging area use 'git diff --name-only --cached' command.
+We can also use 'git diff --staged --name-only' command to view files in staging area which don't committed yet.
+
+
+------------------------------------------------------------------------------------------------------------------------
+3. To list all files present in specific commit use 'git show --name-only CommitHashCode'
+ we can also use 'git diff --name-only CommitHashCode' command to view files in specific commit.
+
+
+
+
+
+

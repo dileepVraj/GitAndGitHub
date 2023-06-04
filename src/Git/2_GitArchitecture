@@ -1,0 +1,104 @@
+/*
+    * Architecture of Git:
+    *
+    * Working directory:
+    * -----------------
+    * In Git working directory is also known as working copy, or working tree refers directory on your computer where
+      you are editing and modifying your project files.
+    *
+    * It is the place where you make changes to the code and add files and remove existing files.
+    *
+    * Think working directory as your workspace.
+    * It's the folder on your computer where you are working on your project files.
+    * you can open these and can edit them using your preferred editor or development environment.
+    *
+    *
+    *
+    * Staging area:
+    * ------------
+    * The staging area also known as index is a crucial component in Git architecture.
+    * It plays a significant role in managing and organizing the changes we made to files before committing them to
+    * repository.
+    * Here are few reasons why staging area is required.
+    *
+    * Selective committing: staging area allows us to selectively choose which changes you want to include in the next
+      commit.
+    * Instead of committing all modified files into the local repository, you can stage specific files or specific parts
+      of files
+    * using 'git add' command.
+    * This flexibility enables you to create logical and well organized commits, grouping related changes together.
+    *
+    * Reviewing changes: The staging area provides a space for reviewing your modifications before finalizing them.
+    * It allows you to see the differences between the current state of the files in your working directory and the
+    * last committed version.
+    * By using the git diff command, you can review the changes you've made and make any necessary adjustments before
+      committing.
+    *
+    * Multiple change-sets: The git staging area allows you to work on multiple changes simultaneously.
+    * You can stage and commit different changesets independently.
+    * This feature is particularly useful when you are working on a large feature or bugfix that spans multiple files.
+    * You can stage related changes as separate commits, making it easier to understand the purpose and impact of each
+      commit.
+    *
+    * Conflict resolution: When collaborating with others on a project conflicts may arise when merging changes from
+      different branches.
+    * The staging area allows you to resolve conflicts before committing the merged changes.
+    * During merge conflict Git marks the conflicting sections and leaves the changes in uncommitted state in staging
+      area.
+    * You can manually resolve the conflicts, update the staging area, and then commit the resolved changes.
+    *
+    * Overall the staging area in Git provides a flexible and efficient workflow for managing changes, allowing to
+      review,and organize modifications before committing them to the repository.
+    *
+    * It promotes clarity, collaboration and maintainability in version control.
+    *
+    * local repository:
+    *
+    * In Git local repository refers to copy of a projects entire version history and files that is stored on your local
+    * machine.
+    * Essentially it is self-contained database which stores all commits, branches, tags and other version control
+      information
+    * belongs to your project.
+    *
+    * When you initialize a Git repository or clone a repository from a remote repository then a local repository is
+      created on your computer.
+    *
+    * This local repository is hidden in a folder called ".git" at the root of your project directory.
+    *
+    * The local repository holds all the commits you make, allowing you to track and manage all the changes you make to
+      your project over time.
+    * It stores the complete history of your code, including all the previous versions and differences between them.
+    *
+    * Here are few key aspects of local Git repository:
+    *
+    * Version History:
+    * The local repository keeps track of all the commits we made to the project.
+    * Each commit represents snapshot of the project at specified point in time, including the changes made and the
+      person
+    * who made them.
+    * This version history enables you to review, compare and revert to previous versions of code if needed.
+    *
+    * Branches and tags: Git allows you to create branches which is independent line of development.
+    * The local repository stores different information about the branches you create, including commits that belongs to
+    * each branch.
+    * In addition you can create tags in Git to mark specific points in version history, such as release notes or
+      significant milestones.
+    * The local repository stores these tags as well.
+    *
+    * Configuration and settings:
+    * Git stores various configuration settings and metadata in local repository.
+    * This includes your username and email address, remote repository URLs, hooks configuration, and more.
+    * These settings are specific to your local environment and not affect other users on remote repository.
+    *
+    * Collaboration: while your local repository primarily exists on your machine, it allows you to interact with remote
+    * repositories and collaborate with others.
+    * You can push your local commits to remote repository to share your changes with team members.
+    * Similarly you can pull changes from a remote repository to update your local repository with the latest commits
+      made
+    * by others.
+    *
+    **/
+
+    /*Files in working directory are called untracked files, where files in staging area are called tracked files and
+      files
+    * in local repository are called committed files.*/

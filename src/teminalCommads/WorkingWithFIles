@@ -1,0 +1,21 @@
+To create files in Git bash use, touch command following with the name of the file you want to create.
+
+Syntax: 'touch fileOne.txt'
+
+To view content in the files we can use 'cat', 'less', 'head', 'tail' commands.
+
+To edit the content in the file we can use 'vim' editor.
+To set numbers to the content in the files in Vim editor we have to use ': set number' command after pressing escape button.
+If we are editing programming file in Vim editor, we can enable programming style by using ':syntax on' command if
+we want to off this programming style ':syntax off'.
+
+If we want to quit the vim editor by saving changes we made to file use ':wq' command which writes the change to the file and
+quits the vim editor.
+
+If we want to quit the vim editor without saving the changes we have to use ':q!' command which don't save changes we made to
+the file.
+
+If we want to navigate around the content in Vim editor we can use 'j, k, l ,h'.
+where J moves cursor downwards, k moves cursor upwards, l moves cursor towards right, h moves cursor towards left.
+
+

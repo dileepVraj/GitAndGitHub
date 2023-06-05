@@ -1,0 +1,17 @@
+
+1. How to move to beginning and end of the statement in command line/bash:
+
+To move to beginning of the statement/line use 'ctrl+a' which takes the cursor to the beginning of the line/statement.
+To move to end of the line/statement use 'ctrl+e' which takes the cursor to the end of the statement.
+
+2. How to move forward and backward one work at a time in a statement or line in bash?
+
+To move cursor one word forward in a statement use 'alt+f' and 'alt+b' for backward moment of cursor.
+
+3. How to delete preceding word in bash?
+
+To delete preceding word in bash use 'alt+backspace'.
+
+4. How to delete following word in bash?
+
+To delete following word where cursor placed in bash use 'alt+d'.

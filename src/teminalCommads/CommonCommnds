@@ -1,0 +1,33 @@
+1. How to print current date on bash?
+
+To print current date on bash use 'date' keyword.
+
+2. How to know current user in bash?
+
+use 'whoami' keyword.
+
+---------------------------------------------------------------------------------------------------------
+To know the current working directory use 'pwd' which stands for present working directory.
+To see all files and folders in 'pwd' press 'ls' where it lists all files and folders in 'pwd'.
+To change the current directory we have to use 'cd followed by directory name' command.
+If we want autofill to directory name press 'tab' button where it will auto fills the directory or file name.
+
+How to go backward folders: to go one folder backward use 'cd ..' command, to go two folders backward use 'cd ../..' command
+
+If we want to shuffle between 2 previous folders we have to use 'cd -' command which shuffles between 2 previous folders.
+
+If we want to go back to root folder we have to use 'cd ~' command.
+
+If we want to create a folder using bash use 'mkdir folderName' 'mkdir' stands for make directory.
+
+If we want to delete folders in bash use 'rm -r directoryName' here -r is recursively deletes the sub folders and files
+inside a directory.
+
+If we want to move a folder inside another folder we have to use 'mv sourceDirectory destinationDirectory'.
+If we want to move the folder outside of another folder then we have to mention 'mv folderNameWhichContainsSourceFolder/folder
+whichNeededToMoveOut directoryWhereToMove'.
+
+If we want to move a folder or file from a folder to current directory we have to use the following command 'mv DestFolder/source
+Folder .' here '.' represents the current directory where bash located.
+
+If we want to see only directories using tree use 'tree -l'

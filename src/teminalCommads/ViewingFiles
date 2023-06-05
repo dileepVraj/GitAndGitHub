@@ -1,0 +1,7 @@
+To view files in bash we can use the 'cat' 'less' 'tail', 'head' commands where cat command shows all contents of file in single
+page, and less command is more advanced which gives us ability to paginate through the file in pages,
+by using 'less fileName' we will able to view the content of file in pages by pressing 'space' where it view the content
+in pages in forward mode if we press 'b' it shows content in pages in backward mode, if we press 'enter' we will traverse
+in forward direction in single line, if we press q we will get out from less mode.
+tail mode where it shows the last few lines of the file.
+where 'head' mode will show few first lines of file.

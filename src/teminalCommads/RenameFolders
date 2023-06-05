@@ -1,0 +1,8 @@
+We know that 'mv' command serves us to move folders and files into another folders, along with that we can also use
+'mv' command to rename the folders/directories.
+
+Suppose assume we have 2 folders in our present working directory 'apples', 'oranges' now we want to rename 'apples' to
+'bananas' to do that we have to use the following command 'mv apples bananas' here what we are doing is we saying rename
+apples with bananas.
+
+That's it the folder with 'apples' will be now renamed with 'bananas'.
